@@ -1,4 +1,6 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
     apiKey: "AIzaSyC4uTnypmmzNR7dtJ4pWR7M_DVQI4wW0QE",
@@ -10,3 +12,6 @@ const config = {
   };
 
   const app = firebase.initializeApp(config);
+
+  export const auth = app.auth();
+  export const database = app.database()
